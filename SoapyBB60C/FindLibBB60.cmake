@@ -8,19 +8,21 @@ PKG_CHECK_MODULES(PC_BB60C libbb_api)
 FIND_PATH(
     BB60C_INCLUDE_DIRS
     NAMES bb_api.h
-    HINTS $ENV{BB60C_DIR}/include
-        ${PC_BB60C_INCLUDEDIR}
-    PATHS /usr/local/include
-          /usr/include
+    HINTS
+        $ENV{BB60C_DIR}/include
+        /usr/local/include/bb60c
+        /usr/local/include
+        /usr/include/bb60c
+        /usr/include
 )
 
 FIND_LIBRARY(
     BB60C_LIBRARIES
     NAMES bb_api
-    HINTS $ENV{BB60C_DIR}/lib
-        ${PC_BB60C_LIBDIR}
-    PATHS /usr/local/lib
-          /usr/lib
+    HINTS
+        $ENV{BB60C_DIR}/lib
+        /usr/local/lib
+        /usr/lib
 )
 
 INCLUDE(FindPackageHandleStandardArgs)
