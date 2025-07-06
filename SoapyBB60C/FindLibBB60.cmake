@@ -3,7 +3,7 @@
 ########################################################################
 
 INCLUDE(FindPkgConfig)
-#PKG_CHECK_MODULES(PC_BB60C libbb_api)
+PKG_CHECK_MODULES(PC_BB60C libbb_api)
 
 FIND_PATH(
     BB60C_INCLUDE_DIRS
